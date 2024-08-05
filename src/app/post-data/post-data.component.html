@@ -1,0 +1,63 @@
+
+
+<div class="post-data-container">
+
+  
+    
+      <button (click)="home()" class="home-button-dhan">
+          <!-- <i class="fa-solid fa-arrow-left"></i> -->
+          <i class="fa-solid fa-house"></i>
+        </button>
+     
+    
+
+  <!-- <button (click)="postData()">Request Data</button> -->
+  
+    <button mat-raised-button color="accent" (click)="postData()">Request Data</button>
+ 
+  
+
+
+  <div *ngIf="responseData">
+    <h3>Response Data:</h3>
+    <pre>{{ responseData | json }}
+    </pre>
+
+    <table class="post-table" >
+
+      <thead>
+      <tr> 
+
+        <th>Name</th>
+        <th>Job</th>
+        <th>ID</th>
+        <th>Created At</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+
+          <td>{{responseData.name}}</td>
+          <td>{{responseData.job}}</td>
+          <td>{{responseData.id}}</td>
+          <td>{{responseData.createdAt}}</td>
+
+        </tr>
+      </tbody>
+
+    </table>
+
+  
+
+
+
+
+
+
+  </div>
+
+ 
+
+</div>
