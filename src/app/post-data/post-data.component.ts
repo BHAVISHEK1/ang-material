@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-post-data',
   templateUrl: './post-data.component.html',
@@ -10,27 +9,15 @@ import { Router } from '@angular/router';
 })
 export class PostDataComponent {
   responseData: any;
+  displayedColumns: string[] = ['name', 'job', 'id', 'createdAt'];
 
-  constructor(private http: HttpClient,private router: Router ) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   postData() {
-
-    // const url = 'https://dhan-rms-admin-api.dhan.co/getsecmaster';
-    // const data = {
-    //     "data": {
-    //         "Exch": "NSE",
-    //         "Segment": "D",
-    //         "ScripCode": "35007"
-    //     }
-    // };
-
-
     const url = 'https://reqres.in/api/users';
     const data = {
-      
-        name: 'John Doe',
-        job: 'Developer'
-      
+      name: 'John Doe',
+      job: 'Developer'
     };
 
     const headers = new HttpHeaders({
@@ -43,16 +30,12 @@ export class PostDataComponent {
         this.responseData = response;
       },
       error => {
-        console.error(' error!', error);
+        console.error('Error!', error);
       }
     );
   }
 
-  
-
   home() {
     this.router.navigate(['/']);
   }
-
-
 }

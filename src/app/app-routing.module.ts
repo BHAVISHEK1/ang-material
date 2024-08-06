@@ -7,7 +7,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ScoreComponent } from './score/score.component';
 import { MarketStatusComponent } from './market-status/market-status.component';
 import { PostDataComponent } from './post-data/post-data.component';
-
+import { Tab2Component } from './tab-2/tab-2.component';
 
 const routes: Routes = [
 
@@ -19,8 +19,9 @@ const routes: Routes = [
   { path: 'dhan', component: MarketStatusComponent },
   { path: 'dhan-post', component: PostDataComponent },  
   {path: 'test-1', component:Test1Component},
-  {path: 'test-2', component:Test2Component}
-
+  {path: 'test-2', component:Test2Component},
+  {path: 'tab-2', component:Tab2Component}
+    
 
 
 
