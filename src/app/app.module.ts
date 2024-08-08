@@ -15,7 +15,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ScoreComponent } from './score/score.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Tab2Component } from './tab-2/tab-2.component';
+
+
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { Tab2Component } from './tab-2/tab-2.component';
     QuizComponent,
     ScoreComponent,
     WelcomeComponent,
-    Tab2Component,
+  
+  
     
    
   ],

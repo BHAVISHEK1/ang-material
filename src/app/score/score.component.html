@@ -1,27 +1,27 @@
-<div class="score-container">
-    
-    <div class="header-container">
-      
-      <button (click)="home()" class="home-button">
-        <i class="fa-solid fa-house"></i>
-      </button>
 
-      
 
-    </div>
-    
-    <h1>Your Score</h1>
-  
-  
-       <p [ngClass]="{'low-score': score < 3, 'high-score': score >= 3}">
-        Your score: {{score}} / {{totalQuestions}}
-      </p>
-      <p *ngIf="score >= 3" class="high-score">Great Score!</p>
-      <p>{{ percentageScore | number:'1.0-2' }}%</p>
-      <p *ngIf="score < 3" class="low-score">You Might Want to Try Again</p>
-      <button (click)="retakeQuiz()">Retake Quiz</button>
-    </div>
-    
-    
-  
+
+   <div class="score-container">
+    <mat-card>
+      <mat-card-header>
+        <button mat-icon-button (click)="home()" class="home-button">
+          <mat-icon>home</mat-icon>
+        </button>
+        
+      </mat-card-header>
+
+      <mat-card-content>
+        <p [ngClass]="{'low-score': score < 3, 'high-score': score >= 3}">
+          Your score: {{score}} / {{totalQuestions}}
+        </p>
+        <p *ngIf="score >= 3" class="high-score">Great Score!</p>
+        <p>{{ percentageScore | number:'1.0-2' }}%</p>
+        <p *ngIf="score < 3" class="low-score">You Might Want to Try Again</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="retakeQuiz()">Retake Quiz</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
   

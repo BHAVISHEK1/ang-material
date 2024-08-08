@@ -1,10 +1,12 @@
+
+<div class="header-container">
+  <button (click)="home()" class="home-button">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  </button>
+  <!-- <h3>Quiz</h3> -->
+</div>
 <div class="quiz-container">
-  <div class="header-container">
-    <button (click)="home()" class="home-button">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-    </button>
-    <h1>Quiz</h1>
-  </div>
+  
 
   <form #quizForm="ngForm" (ngSubmit)="submitQuiz(quizForm)">
     <div *ngFor="let question of questions; let i = index" class="question-container">

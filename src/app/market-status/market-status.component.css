@@ -33,7 +33,7 @@
 
 .filter-field {
   width: 100%;
-  max-width: 150px; /* Maximum width for the dropdowns */
+  max-width: 150px; 
 }
 
 .mat-elevation-z8 {
@@ -48,6 +48,8 @@
 }
 
 /* Responsive Design */
+
+
 @media (max-width: 600px) {
   .filter-item {
     flex: 1 1 auto;
@@ -79,4 +81,4 @@
     gap: 5px;
   }
 }
-
+ 
